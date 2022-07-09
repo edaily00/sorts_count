@@ -23,14 +23,20 @@ def insertion_count(list):
 
     for i in range(1, len(list)):
         j = i
-        while list[j - 1] > list[j] and j > 0:
-            temp = list[j-1]
-            list[j - 1] = list[j]
-            list[j] = temp
-            j -= 1
-            comparisons += 1
-        exchanges += 1
+        comparisons += 1
+
+        while j > 0:
+            if list[j - 1] > list[j]:
+                temp = list[j-1]
+                list[j - 1] = list[j]
+                list[j] = temp
+                j -= 1
+                exchanges += 1
+            else: break
 
     both = (comparisons, exchanges)
     return both
+
+
+
 
