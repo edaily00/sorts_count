@@ -37,9 +37,3 @@ def insertion_count(list):
     both = (comparisons, exchanges)
     return both
 
-
-
-
-list1 = [8,7,9,5]
-print(insertion_count(list1))
-print(insertion_count(list(range(10, 0, -1))))
