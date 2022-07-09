@@ -23,9 +23,9 @@ def insertion_count(list):
 
     for i in range(1, len(list)):
         j = i
-        comparisons += 1
 
         while j > 0:
+            comparisons += 1
             if list[j - 1] > list[j]:
                 temp = list[j-1]
                 list[j - 1] = list[j]
@@ -40,3 +40,6 @@ def insertion_count(list):
 
 
 
+list1 = [8,7,9,5]
+print(insertion_count(list1))
+print(insertion_count(list(range(10, 0, -1))))
